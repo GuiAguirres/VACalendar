@@ -124,6 +124,7 @@ public class VACalendar {
         var endDate = calendar.date(from: endComponents)!
         var months = [VAMonth]()
         
+        endDate = calendar.date(byAdding: .month, value: 1, to: endDate)!
         if startDate >= endDate {
             endDate = calendar.date(byAdding: .month, value: 1, to: startDate)!
         }
